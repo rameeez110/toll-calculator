@@ -26,6 +26,9 @@
 		B6D0F74927F7049100419400 /* FinalCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74827F7049100419400 /* FinalCostViewController.swift */; };
 		B6D0F74B27F7049F00419400 /* FinalCostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74A27F7049F00419400 /* FinalCostViewModel.swift */; };
 		B6D0F74D27F70DD000419400 /* FinalCostNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74C27F70DD000419400 /* FinalCostNavigator.swift */; };
+		B6D0F74F27F717BB00419400 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74E27F717BB00419400 /* NetworkManager.swift */; };
+		B6D0F75127F7199B00419400 /* TollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75027F7199B00419400 /* TollService.swift */; };
+		B6D0F75327F71A4A00419400 /* Toll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75227F71A4A00419400 /* Toll.swift */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -77,6 +80,9 @@
 		B6D0F74827F7049100419400 /* FinalCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostViewController.swift; sourceTree = "<group>"; };
 		B6D0F74A27F7049F00419400 /* FinalCostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostViewModel.swift; sourceTree = "<group>"; };
 		B6D0F74C27F70DD000419400 /* FinalCostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostNavigator.swift; sourceTree = "<group>"; };
+		B6D0F74E27F717BB00419400 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B6D0F75027F7199B00419400 /* TollService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollService.swift; sourceTree = "<group>"; };
+		B6D0F75227F71A4A00419400 /* Toll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toll.swift; sourceTree = "<group>"; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 		B6D0F71927F6E6DC00419400 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F74E27F717BB00419400 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 		B6D0F72927F6E7CF00419400 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F75227F71A4A00419400 /* Toll.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 		B6D0F72A27F6E7D300419400 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F75027F7199B00419400 /* TollService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -671,9 +680,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D0F74F27F717BB00419400 /* NetworkManager.swift in Sources */,
+				B6D0F75327F71A4A00419400 /* Toll.swift in Sources */,
 				B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */,
 				B6D0F73B27F6F95C00419400 /* DateExtension.swift in Sources */,
 				B6D0F71F27F6E74000419400 /* Constants.swift in Sources */,
+				B6D0F75127F7199B00419400 /* TollService.swift in Sources */,
 				B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */,
 				B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */,
 				B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */,
