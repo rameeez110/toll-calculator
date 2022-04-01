@@ -10,6 +10,12 @@
 		57F1DC49EDFA49EA69EC1BDB /* Pods_TollCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA31F1C6AFAE8C2A8454E61 /* Pods_TollCalculator.framework */; };
 		695868DA62FE91FD18E2F6CC /* Pods_TollCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389AFBC9BDF0E9402136E4 /* Pods_TollCalculatorTests.framework */; };
 		AEE81DCAC52E78146C7FD623 /* Pods_TollCalculator_TollCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23C3132C985E604272F9D79 /* Pods_TollCalculator_TollCalculatorUITests.framework */; };
+		B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F71C27F6E73300419400 /* CustomError.swift */; };
+		B6D0F71F27F6E74000419400 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F71E27F6E74000419400 /* Constants.swift */; };
+		B6D0F72327F6E77300419400 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72027F6E77300419400 /* UIFontExtension.swift */; };
+		B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72127F6E77300419400 /* UIViewExtension.swift */; };
+		B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72227F6E77300419400 /* StoryboardExtension.swift */; };
+		B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72727F6E7A100419400 /* AppNavigationController.swift */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -45,6 +51,12 @@
 		7CA31F1C6AFAE8C2A8454E61 /* Pods_TollCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TollCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C4883612A5B73B769E85C /* Pods-TollCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-TollCalculatorTests/Pods-TollCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A23C3132C985E604272F9D79 /* Pods_TollCalculator_TollCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TollCalculator_TollCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D0F71C27F6E73300419400 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		B6D0F71E27F6E74000419400 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B6D0F72027F6E77300419400 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		B6D0F72127F6E77300419400 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B6D0F72227F6E77300419400 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		B6D0F72727F6E7A100419400 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +113,6 @@
 				A10C4883612A5B73B769E85C /* Pods-TollCalculatorTests.debug.xcconfig */,
 				7335A80A428ACB2AEA55CFC4 /* Pods-TollCalculatorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,6 +124,163 @@
 				4E389AFBC9BDF0E9402136E4 /* Pods_TollCalculatorTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6D0F70D27F6E52E00419400 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F72C27F6E7DC00419400 /* Domain */,
+				B6D0F72B27F6E7D800419400 /* Data */,
+				B6D0F72A27F6E7D300419400 /* Services */,
+				B6D0F72927F6E7CF00419400 /* Models */,
+				B6D0F70E27F6E53300419400 /* UI */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B6D0F70E27F6E53300419400 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F70F27F6E53800419400 /* EntryViews */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B6D0F70F27F6E53800419400 /* EntryViews */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F71227F6E55300419400 /* Navigator */,
+				B6D0F71127F6E54E00419400 /* ViewModel */,
+				B6D0F71027F6E54A00419400 /* View */,
+			);
+			path = EntryViews;
+			sourceTree = "<group>";
+		};
+		B6D0F71027F6E54A00419400 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F71327F6E57300419400 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6D0F71127F6E54E00419400 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6D0F71227F6E55300419400 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		B6D0F71327F6E57300419400 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6E0967227F6B49C0051CBC6 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B6D0F71427F6E6AD00419400 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6E0967727F6B49E0051CBC6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6D0F71527F6E6C500419400 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F71A27F6E6E200419400 /* Utils */,
+				B6D0F71927F6E6DC00419400 /* Networking */,
+				B6D0F71827F6E6D500419400 /* Constants */,
+				B6D0F71727F6E6CF00419400 /* Extension */,
+				B6D0F71627F6E6CA00419400 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B6D0F71627F6E6CA00419400 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F72627F6E79000419400 /* Controller */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B6D0F71727F6E6CF00419400 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F72227F6E77300419400 /* StoryboardExtension.swift */,
+				B6D0F72027F6E77300419400 /* UIFontExtension.swift */,
+				B6D0F72127F6E77300419400 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6D0F71827F6E6D500419400 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F71E27F6E74000419400 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B6D0F71927F6E6DC00419400 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B6D0F71A27F6E6E200419400 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F71C27F6E73300419400 /* CustomError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6D0F72627F6E79000419400 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F72727F6E7A100419400 /* AppNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B6D0F72927F6E7CF00419400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6D0F72A27F6E7D300419400 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6D0F72B27F6E7D800419400 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B6D0F72C27F6E7DC00419400 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		B6E0966227F6B49C0051CBC6 = {
@@ -140,11 +308,12 @@
 		B6E0966D27F6B49C0051CBC6 /* TollCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F71527F6E6C500419400 /* Common */,
+				B6D0F71427F6E6AD00419400 /* Resources */,
+				B6D0F70D27F6E52E00419400 /* Features */,
 				B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */,
 				B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */,
-				B6E0967227F6B49C0051CBC6 /* ViewController.swift */,
 				B6E0967427F6B49C0051CBC6 /* Main.storyboard */,
-				B6E0967727F6B49E0051CBC6 /* Assets.xcassets */,
 				B6E0967927F6B49E0051CBC6 /* LaunchScreen.storyboard */,
 				B6E0967C27F6B49E0051CBC6 /* Info.plist */,
 			);
@@ -407,8 +576,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */,
+				B6D0F71F27F6E74000419400 /* Constants.swift in Sources */,
 				B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */,
+				B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */,
+				B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */,
 				B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */,
+				B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */,
+				B6D0F72327F6E77300419400 /* UIFontExtension.swift in Sources */,
 				B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
