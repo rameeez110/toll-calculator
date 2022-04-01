@@ -16,6 +16,9 @@
 		B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72127F6E77300419400 /* UIViewExtension.swift */; };
 		B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72227F6E77300419400 /* StoryboardExtension.swift */; };
 		B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72727F6E7A100419400 /* AppNavigationController.swift */; };
+		B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72E27F6E82D00419400 /* AppNavigator.swift */; };
+		B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73127F6E8B500419400 /* EntryNavigator.swift */; };
+		B6D0F73427F6E8C000419400 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73327F6E8C000419400 /* EntryViewModel.swift */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -57,6 +60,9 @@
 		B6D0F72127F6E77300419400 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B6D0F72227F6E77300419400 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		B6D0F72727F6E7A100419400 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		B6D0F72E27F6E82D00419400 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		B6D0F73127F6E8B500419400 /* EntryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryNavigator.swift; sourceTree = "<group>"; };
+		B6D0F73327F6E8C000419400 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		B6D0F71127F6E54E00419400 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F73327F6E8C000419400 /* EntryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		B6D0F71227F6E55300419400 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F73127F6E8B500419400 /* EntryNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -283,6 +291,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		B6D0F72D27F6E81D00419400 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F72E27F6E82D00419400 /* AppNavigator.swift */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
 		B6E0966227F6B49C0051CBC6 = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +324,7 @@
 		B6E0966D27F6B49C0051CBC6 /* TollCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F72D27F6E81D00419400 /* AppNavigator */,
 				B6D0F71527F6E6C500419400 /* Common */,
 				B6D0F71427F6E6AD00419400 /* Resources */,
 				B6D0F70D27F6E52E00419400 /* Features */,
@@ -579,10 +596,13 @@
 				B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */,
 				B6D0F71F27F6E74000419400 /* Constants.swift in Sources */,
 				B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */,
+				B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */,
+				B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */,
 				B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */,
 				B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */,
 				B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */,
 				B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */,
+				B6D0F73427F6E8C000419400 /* EntryViewModel.swift in Sources */,
 				B6D0F72327F6E77300419400 /* UIFontExtension.swift in Sources */,
 				B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */,
 			);

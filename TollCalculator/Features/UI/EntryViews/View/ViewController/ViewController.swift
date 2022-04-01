@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var viewModel: EntryViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +17,19 @@ class ViewController: UIViewController {
         
         print("call ho gaya hun")
     }
+    
+}
 
+//MARK: - Delegates
 
+extension ViewController: EntryViewModelDelegate {
+    func alert(with title: String, message: String) {
+//        self.infoLabel.isHidden = false
+//        self.infoLabel.text = message
+    }
+    func validationError(error: String) {
+//        self.infoLabel.isHidden = false
+//        self.infoLabel.text = error
+    }
 }
 
