@@ -9,6 +9,7 @@ import UIKit
 
 protocol EntryNavigatorProtocol {
     func navigateToSubmit()
+    func navigateToCalculate()
 }
 
 
@@ -16,21 +17,35 @@ class EntryNavigator: EntryNavigatorProtocol {
     private weak var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController) {
-        navigationController.navigationBar.isHidden = true
+        navigationController.navigationBar.isHidden = false
+        navigationController.title = "Entry"
         self.navigationController = navigationController
     }
 
     func navigateToSubmit() {
         // controller create & setup
         let storyboard = UIStoryboard(storyboard: .main)
-//        let registerVC: RegisterViewController = storyboard.instantiateViewController()
-        //View Model create & setup
+        let exitVC: ViewController = storyboard.instantiateViewController()
+        // View Model create & setup
         if let nc = self.navigationController {
-//            let navigator = RegisterNavigator(navigationController: nc)
-//            let viewModel = RegisterViewModel(navigator: navigator)
-//            registerVC.viewModel = viewModel
-//            viewModel.delegate = registerVC
-//            navigationController?.pushViewController(registerVC, animated: true)
+            let navigator = EntryNavigator(navigationController: nc)
+            let viewModel = EntryViewModel(type: .Exit, navigator: navigator)
+            exitVC.viewModel = viewModel
+            viewModel.delegate = exitVC
+            navigationController?.pushViewController(exitVC, animated: true)
+        }
+    }
+    func navigateToCalculate() {
+        // controller create & setup
+        let storyboard = UIStoryboard(storyboard: .main)
+        let costVC: FinalCostViewController = storyboard.instantiateViewController()
+        // View Model create & setup
+        if let nc = self.navigationController {
+            let navigator = FinalCostNavigator(navigationController: nc)
+            let viewModel = FinalCostViewModel(navigator: navigator)
+            costVC.viewModel = viewModel
+            viewModel.delegate = costVC
+            navigationController?.pushViewController(costVC, animated: true)
         }
     }
 }

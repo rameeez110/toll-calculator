@@ -19,6 +19,13 @@
 		B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F72E27F6E82D00419400 /* AppNavigator.swift */; };
 		B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73127F6E8B500419400 /* EntryNavigator.swift */; };
 		B6D0F73427F6E8C000419400 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73327F6E8C000419400 /* EntryViewModel.swift */; };
+		B6D0F73827F6F5E600419400 /* DatePickerPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73627F6F5E600419400 /* DatePickerPopupViewController.swift */; };
+		B6D0F73927F6F5E600419400 /* DatePickerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D0F73727F6F5E600419400 /* DatePickerPopupViewController.xib */; };
+		B6D0F73B27F6F95C00419400 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F73A27F6F95C00419400 /* DateExtension.swift */; };
+		B6D0F74227F6FD6100419400 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74127F6FD6100419400 /* Enum.swift */; };
+		B6D0F74927F7049100419400 /* FinalCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74827F7049100419400 /* FinalCostViewController.swift */; };
+		B6D0F74B27F7049F00419400 /* FinalCostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74A27F7049F00419400 /* FinalCostViewModel.swift */; };
+		B6D0F74D27F70DD000419400 /* FinalCostNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74C27F70DD000419400 /* FinalCostNavigator.swift */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -63,6 +70,13 @@
 		B6D0F72E27F6E82D00419400 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		B6D0F73127F6E8B500419400 /* EntryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryNavigator.swift; sourceTree = "<group>"; };
 		B6D0F73327F6E8C000419400 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		B6D0F73627F6F5E600419400 /* DatePickerPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPopupViewController.swift; sourceTree = "<group>"; };
+		B6D0F73727F6F5E600419400 /* DatePickerPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerPopupViewController.xib; sourceTree = "<group>"; };
+		B6D0F73A27F6F95C00419400 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		B6D0F74127F6FD6100419400 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		B6D0F74827F7049100419400 /* FinalCostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostViewController.swift; sourceTree = "<group>"; };
+		B6D0F74A27F7049F00419400 /* FinalCostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostViewModel.swift; sourceTree = "<group>"; };
+		B6D0F74C27F70DD000419400 /* FinalCostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCostNavigator.swift; sourceTree = "<group>"; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +161,8 @@
 		B6D0F70E27F6E53300419400 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F74327F7045A00419400 /* FinalCostViews */,
+				B6D0F73527F6F5CD00419400 /* Popups */,
 				B6D0F70F27F6E53800419400 /* EntryViews */,
 			);
 			path = UI;
@@ -205,6 +221,7 @@
 		B6D0F71527F6E6C500419400 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F74027F6FD5100419400 /* Enums */,
 				B6D0F71A27F6E6E200419400 /* Utils */,
 				B6D0F71927F6E6DC00419400 /* Networking */,
 				B6D0F71827F6E6D500419400 /* Constants */,
@@ -228,6 +245,7 @@
 				B6D0F72227F6E77300419400 /* StoryboardExtension.swift */,
 				B6D0F72027F6E77300419400 /* UIFontExtension.swift */,
 				B6D0F72127F6E77300419400 /* UIViewExtension.swift */,
+				B6D0F73A27F6F95C00419400 /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,6 +315,65 @@
 				B6D0F72E27F6E82D00419400 /* AppNavigator.swift */,
 			);
 			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		B6D0F73527F6F5CD00419400 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F73627F6F5E600419400 /* DatePickerPopupViewController.swift */,
+				B6D0F73727F6F5E600419400 /* DatePickerPopupViewController.xib */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		B6D0F74027F6FD5100419400 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74127F6FD6100419400 /* Enum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B6D0F74327F7045A00419400 /* FinalCostViews */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74627F7047700419400 /* View */,
+				B6D0F74527F7046F00419400 /* ViewModel */,
+				B6D0F74427F7046A00419400 /* Navigator */,
+			);
+			path = FinalCostViews;
+			sourceTree = "<group>";
+		};
+		B6D0F74427F7046A00419400 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74C27F70DD000419400 /* FinalCostNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		B6D0F74527F7046F00419400 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74A27F7049F00419400 /* FinalCostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6D0F74627F7047700419400 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74727F7047E00419400 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6D0F74727F7047E00419400 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F74827F7049100419400 /* FinalCostViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B6E0966227F6B49C0051CBC6 = {
@@ -466,6 +543,7 @@
 				B6E0967B27F6B49E0051CBC6 /* LaunchScreen.storyboard in Resources */,
 				B6E0967827F6B49E0051CBC6 /* Assets.xcassets in Resources */,
 				B6E0967627F6B49C0051CBC6 /* Main.storyboard in Resources */,
+				B6D0F73927F6F5E600419400 /* DatePickerPopupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,17 +672,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D0F72827F6E7A100419400 /* AppNavigationController.swift in Sources */,
+				B6D0F73B27F6F95C00419400 /* DateExtension.swift in Sources */,
 				B6D0F71F27F6E74000419400 /* Constants.swift in Sources */,
 				B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */,
 				B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */,
 				B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */,
 				B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */,
 				B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */,
+				B6D0F74227F6FD6100419400 /* Enum.swift in Sources */,
 				B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */,
+				B6D0F74927F7049100419400 /* FinalCostViewController.swift in Sources */,
 				B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */,
 				B6D0F73427F6E8C000419400 /* EntryViewModel.swift in Sources */,
 				B6D0F72327F6E77300419400 /* UIFontExtension.swift in Sources */,
+				B6D0F73827F6F5E600419400 /* DatePickerPopupViewController.swift in Sources */,
 				B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */,
+				B6D0F74B27F7049F00419400 /* FinalCostViewModel.swift in Sources */,
+				B6D0F74D27F70DD000419400 /* FinalCostNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

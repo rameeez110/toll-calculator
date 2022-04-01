@@ -11,6 +11,7 @@ target 'TollCalculator' do
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyAvatar'
   pod 'SwiftyJSON'
+  pod 'STPopup'
 
   target 'TollCalculatorTests' do
     inherit! :search_paths

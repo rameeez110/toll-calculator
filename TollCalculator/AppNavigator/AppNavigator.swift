@@ -16,7 +16,7 @@ struct AppNavigator {
         let rootController = AppNavigationController(rootViewController: vc)
         // View Model create & setup
         let navigator = EntryNavigator(navigationController: rootController)
-        let viewModel = EntryViewModel(navigator: navigator)
+        let viewModel = EntryViewModel(type: .Entry, navigator: navigator)
         
 //        service.delegate = viewModel
         viewModel.delegate = vc
