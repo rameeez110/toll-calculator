@@ -29,7 +29,7 @@ struct TollRequestModel {
         "entryInterchange": self.entryInterchange,
         "exitInterchange": self.exitInterchange,
         "totalCost": self.totalCost,
-        "tripStatus": self.tripStatus,
+        "tripStatus": self.tripStatus.rawValue,
       ]
     }
 }

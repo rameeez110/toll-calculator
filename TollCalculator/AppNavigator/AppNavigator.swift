@@ -15,8 +15,11 @@ struct AppNavigator {
         let vc: ViewController = storyboard.initialViewController()
         let rootController = AppNavigationController(rootViewController: vc)
         // View Model create & setup
+        let remoteDataSource = TripRemoteDataStore()
+        let repository = TripRepository.init(remoteTripDataSource: remoteDataSource)
+        let service = TripsService.init(tripRepository: repository)
         let navigator = EntryNavigator(navigationController: rootController)
-        let viewModel = EntryViewModel(type: .Entry, navigator: navigator)
+        let viewModel = EntryViewModel(service: service, type: .Entry, navigator: navigator)
         
 //        service.delegate = viewModel
         viewModel.delegate = vc

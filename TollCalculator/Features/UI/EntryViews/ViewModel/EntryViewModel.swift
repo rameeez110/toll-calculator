@@ -27,21 +27,31 @@ final class EntryViewModel: EntryViewModelProtocol {
     weak var delegate: EntryViewModelDelegate?
     private let navigator: EntryNavigatorProtocol
     var selectedScreenType: TollScreenType
+    private let tollService: TripsServiceProtocol
 
-    init(type: TollScreenType,navigator: EntryNavigatorProtocol, delegate: EntryViewModelDelegate? = nil) {
+    init(service: TripsServiceProtocol,type: TollScreenType,navigator: EntryNavigatorProtocol, delegate: EntryViewModelDelegate? = nil) {
         self.delegate = delegate
         self.navigator = navigator
         self.selectedScreenType = type
+        self.tollService = service
     }
 
     func didTapSubmit(interchange: String,numberPlate: String,date: String) {
         let (status,string) = self.validateFields(interchange: interchange,numberPlate: numberPlate,date: date)
         if status {
             self.delegate?.hideInfoLabel()
+            var toll = TollRequestModel.init()
+            toll.numberPlate = numberPlate
             if self.selectedScreenType == .Entry {
-                navigator.navigateToSubmit()
+                toll.entryInterchange = interchange
+                toll.entryDate = date
+                self.tollService.addUpdateToll(toll: toll)
+                
             } else {
-                navigator.navigateToCalculate()
+                toll.exitDate = date
+                toll.exitInterchange = interchange
+                toll.tripStatus = .Completed
+                self.tollService.addUpdateToll(toll: toll)
             }
         } else {
             self.delegate?.validationError(error: string)
@@ -64,5 +74,15 @@ final class EntryViewModel: EntryViewModelProtocol {
             return (false,string)
         }
         return (true,"")
+    }
+}
+
+extension EntryViewModel: TripsServiceDelegate {
+    func didAddUpdateTrip(toll: TollRequestModel) {
+        self.navigator.navigateToSubmit()
+    }
+    
+    func didFailWithError(error: CustomError) {
+        self.delegate?.alert(with: "Alert!", message: error.errorString ?? "")
     }
 }

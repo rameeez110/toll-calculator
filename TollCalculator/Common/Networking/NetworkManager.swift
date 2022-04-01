@@ -40,7 +40,7 @@ class NetworkManager: NSObject {
     
     func sentRequestToServer( request : inout URLRequest, apiName: String, params: Any?, apiType : ApiType,_ bodyparam: Bool = false, completionHandler:@escaping CompletionHandlerType)
     {
-        let url =  URL.init(string: "\(Constants.API.baseURL)\(apiName)")
+        let url =  URL.init(string: "\(Constants.API.baseURL)\(Constants.API.apiKey)\(apiName)")
         
         let param = params as? [String: Any]
         var arrayPrm = [AnyObject]()

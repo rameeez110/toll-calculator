@@ -29,6 +29,9 @@
 		B6D0F74F27F717BB00419400 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F74E27F717BB00419400 /* NetworkManager.swift */; };
 		B6D0F75127F7199B00419400 /* TollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75027F7199B00419400 /* TollService.swift */; };
 		B6D0F75327F71A4A00419400 /* Toll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75227F71A4A00419400 /* Toll.swift */; };
+		B6D0F75627F71FE200419400 /* TripRemoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75527F71FE200419400 /* TripRemoteDataStore.swift */; };
+		B6D0F75827F7227400419400 /* TripsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75727F7227400419400 /* TripsService.swift */; };
+		B6D0F75A27F7234800419400 /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F75927F7234800419400 /* TripRepository.swift */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -83,6 +86,9 @@
 		B6D0F74E27F717BB00419400 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B6D0F75027F7199B00419400 /* TollService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollService.swift; sourceTree = "<group>"; };
 		B6D0F75227F71A4A00419400 /* Toll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toll.swift; sourceTree = "<group>"; };
+		B6D0F75527F71FE200419400 /* TripRemoteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRemoteDataStore.swift; sourceTree = "<group>"; };
+		B6D0F75727F7227400419400 /* TripsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsService.swift; sourceTree = "<group>"; };
+		B6D0F75927F7234800419400 /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D0F75027F7199B00419400 /* TollService.swift */,
+				B6D0F75727F7227400419400 /* TripsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 		B6D0F72B27F6E7D800419400 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F75427F71FC800419400 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 		B6D0F72C27F6E7DC00419400 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0F75927F7234800419400 /* TripRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -383,6 +392,14 @@
 				B6D0F74827F7049100419400 /* FinalCostViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B6D0F75427F71FC800419400 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0F75527F71FE200419400 /* TripRemoteDataStore.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		B6E0966227F6B49C0051CBC6 = {
@@ -688,11 +705,14 @@
 				B6D0F75127F7199B00419400 /* TollService.swift in Sources */,
 				B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */,
 				B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */,
+				B6D0F75627F71FE200419400 /* TripRemoteDataStore.swift in Sources */,
 				B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */,
 				B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */,
 				B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */,
 				B6D0F74227F6FD6100419400 /* Enum.swift in Sources */,
 				B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */,
+				B6D0F75A27F7234800419400 /* TripRepository.swift in Sources */,
+				B6D0F75827F7227400419400 /* TripsService.swift in Sources */,
 				B6D0F74927F7049100419400 /* FinalCostViewController.swift in Sources */,
 				B6D0F72427F6E77300419400 /* UIViewExtension.swift in Sources */,
 				B6D0F73427F6E8C000419400 /* EntryViewModel.swift in Sources */,

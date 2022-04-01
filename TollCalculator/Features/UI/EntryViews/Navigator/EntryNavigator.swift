@@ -29,7 +29,10 @@ class EntryNavigator: EntryNavigatorProtocol {
         // View Model create & setup
         if let nc = self.navigationController {
             let navigator = EntryNavigator(navigationController: nc)
-            let viewModel = EntryViewModel(type: .Exit, navigator: navigator)
+            let remoteDataSource = TripRemoteDataStore()
+            let repository = TripRepository.init(remoteTripDataSource: remoteDataSource)
+            let service = TripsService.init(tripRepository: repository)
+            let viewModel = EntryViewModel(service: service, type: .Exit, navigator: navigator)
             exitVC.viewModel = viewModel
             viewModel.delegate = exitVC
             navigationController?.pushViewController(exitVC, animated: true)
