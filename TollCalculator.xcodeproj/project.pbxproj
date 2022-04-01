@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57F1DC49EDFA49EA69EC1BDB /* Pods_TollCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA31F1C6AFAE8C2A8454E61 /* Pods_TollCalculator.framework */; };
+		695868DA62FE91FD18E2F6CC /* Pods_TollCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389AFBC9BDF0E9402136E4 /* Pods_TollCalculatorTests.framework */; };
+		AEE81DCAC52E78146C7FD623 /* Pods_TollCalculator_TollCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23C3132C985E604272F9D79 /* Pods_TollCalculator_TollCalculatorUITests.framework */; };
 		B6E0966F27F6B49C0051CBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */; };
 		B6E0967127F6B49C0051CBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */; };
 		B6E0967327F6B49C0051CBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0967227F6B49C0051CBC6 /* ViewController.swift */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC06DAB61ADCB8549B98A8C /* Pods-TollCalculator-TollCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator-TollCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E389AFBC9BDF0E9402136E4 /* Pods_TollCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TollCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7335A80A428ACB2AEA55CFC4 /* Pods-TollCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-TollCalculatorTests/Pods-TollCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		7CA31F1C6AFAE8C2A8454E61 /* Pods_TollCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TollCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10C4883612A5B73B769E85C /* Pods-TollCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-TollCalculatorTests/Pods-TollCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A23C3132C985E604272F9D79 /* Pods_TollCalculator_TollCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TollCalculator_TollCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966B27F6B49C0051CBC6 /* TollCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TollCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0966E27F6B49C0051CBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6E0967027F6B49C0051CBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		B6E0968B27F6B49E0051CBC6 /* TollCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0968F27F6B49E0051CBC6 /* TollCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollCalculatorUITests.swift; sourceTree = "<group>"; };
 		B6E0969127F6B49E0051CBC6 /* TollCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5F4049051CC12C097CFDC5E /* Pods-TollCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator.debug.xcconfig"; path = "Target Support Files/Pods-TollCalculator/Pods-TollCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		D9A400BE498890EB580B05E6 /* Pods-TollCalculator-TollCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator-TollCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F3362F6EC13B41AC12582A1F /* Pods-TollCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator.release.xcconfig"; path = "Target Support Files/Pods-TollCalculator/Pods-TollCalculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F1DC49EDFA49EA69EC1BDB /* Pods_TollCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695868DA62FE91FD18E2F6CC /* Pods_TollCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE81DCAC52E78146C7FD623 /* Pods_TollCalculator_TollCalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		507D95A174FE17C1C296EA1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F4049051CC12C097CFDC5E /* Pods-TollCalculator.debug.xcconfig */,
+				F3362F6EC13B41AC12582A1F /* Pods-TollCalculator.release.xcconfig */,
+				1AC06DAB61ADCB8549B98A8C /* Pods-TollCalculator-TollCalculatorUITests.debug.xcconfig */,
+				D9A400BE498890EB580B05E6 /* Pods-TollCalculator-TollCalculatorUITests.release.xcconfig */,
+				A10C4883612A5B73B769E85C /* Pods-TollCalculatorTests.debug.xcconfig */,
+				7335A80A428ACB2AEA55CFC4 /* Pods-TollCalculatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6AC083645FD40382CAB2D88C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CA31F1C6AFAE8C2A8454E61 /* Pods_TollCalculator.framework */,
+				A23C3132C985E604272F9D79 /* Pods_TollCalculator_TollCalculatorUITests.framework */,
+				4E389AFBC9BDF0E9402136E4 /* Pods_TollCalculatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6E0966227F6B49C0051CBC6 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				B6E0968427F6B49E0051CBC6 /* TollCalculatorTests */,
 				B6E0968E27F6B49E0051CBC6 /* TollCalculatorUITests */,
 				B6E0966C27F6B49C0051CBC6 /* Products */,
+				507D95A174FE17C1C296EA1C /* Pods */,
+				6AC083645FD40382CAB2D88C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6E0969527F6B49E0051CBC6 /* Build configuration list for PBXNativeTarget "TollCalculator" */;
 			buildPhases = (
+				F8364738C79819FB7C9C1DF8 /* [CP] Check Pods Manifest.lock */,
 				B6E0966727F6B49C0051CBC6 /* Sources */,
 				B6E0966827F6B49C0051CBC6 /* Frameworks */,
 				B6E0966927F6B49C0051CBC6 /* Resources */,
+				E4EB425040856345CCA9116A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6E0969827F6B49E0051CBC6 /* Build configuration list for PBXNativeTarget "TollCalculatorTests" */;
 			buildPhases = (
+				42EAA7CAD509279590CF0A80 /* [CP] Check Pods Manifest.lock */,
 				B6E0967D27F6B49E0051CBC6 /* Sources */,
 				B6E0967E27F6B49E0051CBC6 /* Frameworks */,
 				B6E0967F27F6B49E0051CBC6 /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6E0969B27F6B49E0051CBC6 /* Build configuration list for PBXNativeTarget "TollCalculatorUITests" */;
 			buildPhases = (
+				3C5A39479D05C859FC6AFCCB /* [CP] Check Pods Manifest.lock */,
 				B6E0968727F6B49E0051CBC6 /* Sources */,
 				B6E0968827F6B49E0051CBC6 /* Frameworks */,
 				B6E0968927F6B49E0051CBC6 /* Resources */,
+				F93DE1854B542FABED6E3F5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C5A39479D05C859FC6AFCCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TollCalculator-TollCalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42EAA7CAD509279590CF0A80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TollCalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4EB425040856345CCA9116A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TollCalculator/Pods-TollCalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TollCalculator/Pods-TollCalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TollCalculator/Pods-TollCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8364738C79819FB7C9C1DF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TollCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F93DE1854B542FABED6E3F5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6E0966727F6B49C0051CBC6 /* Sources */ = {
@@ -434,6 +583,7 @@
 		};
 		B6E0969627F6B49E0051CBC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F4049051CC12C097CFDC5E /* Pods-TollCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +611,7 @@
 		};
 		B6E0969727F6B49E0051CBC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3362F6EC13B41AC12582A1F /* Pods-TollCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +639,7 @@
 		};
 		B6E0969927F6B49E0051CBC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C4883612A5B73B769E85C /* Pods-TollCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +659,7 @@
 		};
 		B6E0969A27F6B49E0051CBC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7335A80A428ACB2AEA55CFC4 /* Pods-TollCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +679,7 @@
 		};
 		B6E0969C27F6B49E0051CBC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC06DAB61ADCB8549B98A8C /* Pods-TollCalculator-TollCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +697,7 @@
 		};
 		B6E0969D27F6B49E0051CBC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A400BE498890EB580B05E6 /* Pods-TollCalculator-TollCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

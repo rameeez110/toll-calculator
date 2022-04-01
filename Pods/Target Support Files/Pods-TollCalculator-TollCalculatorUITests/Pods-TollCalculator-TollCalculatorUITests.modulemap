@@ -1,0 +1,6 @@
+framework module Pods_TollCalculator_TollCalculatorUITests {
+  umbrella header "Pods-TollCalculator-TollCalculatorUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
