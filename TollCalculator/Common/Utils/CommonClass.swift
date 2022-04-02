@@ -39,3 +39,57 @@ extension CommonClass {
         return platePred.evaluate(with: number)
     }
 }
+
+//MARK: Bussiness Rules
+extension CommonClass {
+    func mapBussinessRules(model: TollModel) -> String{
+        var cost = Double(20) // Base Rate
+        let cal = Calendar.current
+        
+        let weekdayExit = cal.component(.weekday, from: model.exitDate)
+        let weekdayEntry = cal.component(.weekday, from: model.entryDate)
+        var perHourRate = Double(0.2)
+        var discountInPercent = Int()
+        let numberPlateOnlyNumberPart = Int(model.numberPlate.components(separatedBy: "-").last ?? "0") ?? Int()
+        
+        // applying perhour rate on basis of weekends
+        switch weekdayExit {
+        case 1: // Sunday
+            perHourRate = Double(0.2 * 1.5)
+        case 7: // Saturday
+            perHourRate = Double(0.2 * 1.5)
+        default:
+            print("")
+        }
+        // applying discount on base of weekdays like monday or wed, tues or thurs
+        switch weekdayEntry {
+        case 2: // Monday
+            if numberPlateOnlyNumberPart % 2 == 0 {
+                discountInPercent = 10
+            }
+        case 3: // Tuesday
+            if numberPlateOnlyNumberPart % 2 != 0 {
+                discountInPercent = 10
+            }
+        case 4: // Wednesday
+            if numberPlateOnlyNumberPart % 2 == 0 {
+                discountInPercent = 10
+            }
+        case 5: // Thursday
+            if numberPlateOnlyNumberPart % 2 != 0 {
+                discountInPercent = 10
+            }
+        default:
+            print("")
+        }
+        
+        cost = cost + (perHourRate * Double(abs(model.exitDistance - model.entryDistance)))
+        
+        // applied discount if there is
+        if discountInPercent > Int() {
+            cost = cost - (cost * Double((discountInPercent/100)))
+        }
+        
+        return String(cost)
+    }
+}

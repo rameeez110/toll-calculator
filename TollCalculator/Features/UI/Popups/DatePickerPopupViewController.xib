@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhQ-op-iJ3">
-                    <rect key="frame" x="30" y="74" width="354" height="296"/>
+                    <rect key="frame" x="30" y="74" width="360" height="217"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-E6-vJS">
-                            <rect key="frame" x="269" y="5" width="80" height="30"/>
+                            <rect key="frame" x="275" y="5" width="80" height="30"/>
                             <color key="backgroundColor" red="0.61960784310000006" green="0.79215686269999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="jTo-3p-yzV"/>
@@ -47,8 +47,8 @@
                                 <action selector="didTapDone" destination="-1" eventType="touchUpInside" id="fer-Wd-5nZ"/>
                             </connections>
                         </button>
-                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-BU-dyO">
-                            <rect key="frame" x="15" y="45" width="324" height="241"/>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-BU-dyO">
+                            <rect key="frame" x="15" y="45" width="330" height="162"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>

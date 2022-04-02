@@ -77,36 +77,43 @@ extension ViewController {
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.ZeroPoint.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.ZeroPoint)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.NS.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.NS.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.NS)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.Ph4.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.Ph4.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.Ph4)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.Ferozpur.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.Ferozpur.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.Ferozpur)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.LakeCity.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.LakeCity.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.LakeCity)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.Raiwand.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.Raiwand.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.Raiwand)
         }))
         sheet.addAction(UIAlertAction(title: InterchangeTypes.Bahria.rawValue,
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
             self.interchangeTextField.text = InterchangeTypes.Bahria.rawValue
+            self.viewModel?.updateEntryOrExitInterchange(type: InterchangeTypes.Bahria)
         }))
         CommonClass.sharedInstance.showSheet(sheet: sheet, sender: UIButton(), owner: self)
     }
@@ -135,6 +142,11 @@ extension ViewController: EntryViewModelDelegate {
 
 extension ViewController: DatePickerDelegate{
     func didSelectDate(date: Date) {
+        if self.viewModel?.selectedScreenType == .Entry {
+            self.viewModel?.tollModel.entryDate = date
+        } else {
+            self.viewModel?.tollModel.exitDate = date
+        }
         self.dateTextField.text = "\(date.getDateInString())"
     }
 }

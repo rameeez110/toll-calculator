@@ -8,14 +8,16 @@
 import UIKit
 
 struct TollModel {
-    var entryDate = String()
-    var exitDate = String()
+    var entryDate = Date()
+    var exitDate = Date()
     var numberPlate = String()
     var entryInterchange = String()
     var exitInterchange = String()
     var totalCost = String()
     var tripStatus = TripStatus.Active
     var id = String()
+    var entryDistance = Int()
+    var exitDistance = Int()
     
     init() {
         
@@ -23,8 +25,8 @@ struct TollModel {
     
     var dictionary: [String: Any] {
       return [
-        "entryDate": self.entryDate,
-        "exitDate": self.exitDate,
+        "entryDate": self.entryDate.getDateInString(),
+        "exitDate": self.exitDate.getDateInString(),
         "numberPlate": self.numberPlate,
         "entryInterchange": self.entryInterchange,
         "exitInterchange": self.exitInterchange,

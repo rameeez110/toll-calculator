@@ -21,6 +21,7 @@ protocol EntryViewModelProtocol {
     var tollModel: TollModel { get set }
     
     func didTapSubmit(interchange: String,numberPlate: String,date: String)
+    func updateEntryOrExitInterchange(type: InterchangeTypes)
 }
 
 final class EntryViewModel: EntryViewModelProtocol {
@@ -45,17 +46,69 @@ final class EntryViewModel: EntryViewModelProtocol {
             self.tollModel.numberPlate = numberPlate
             if self.selectedScreenType == .Entry {
                 self.tollModel.entryInterchange = interchange
-                self.tollModel.entryDate = date
+                self.tollModel.entryDate = self.tollModel.entryDate
                 self.tollService.addUpdateToll(toll: self.tollModel)
                 
             } else {
-                self.tollModel.exitDate = date
+                self.tollModel.exitDate = self.tollModel.exitDate
                 self.tollModel.exitInterchange = interchange
                 self.tollModel.tripStatus = .Completed
+                self.tollModel.totalCost = CommonClass.sharedInstance.mapBussinessRules(model: self.tollModel)
                 self.tollService.addUpdateToll(toll: self.tollModel)
             }
         } else {
             self.delegate?.validationError(error: string)
+        }
+    }
+    func updateEntryOrExitInterchange(type: InterchangeTypes) {
+        if self.selectedScreenType == .Entry {
+            self.tollModel.entryInterchange = type.rawValue
+        } else {
+            self.tollModel.exitInterchange = type.rawValue
+        }
+        switch type {
+        case .ZeroPoint:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.ZeroPoint.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.ZeroPoint.rawValue
+            }
+        case .NS:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.NS.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.NS.rawValue
+            }
+        case .Ph4:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.Ph4.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.Ph4.rawValue
+            }
+        case .Ferozpur:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.Ferozpur.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.Ferozpur.rawValue
+            }
+        case .LakeCity:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.LakeCity.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.LakeCity.rawValue
+            }
+        case .Raiwand:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.Raiwand.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.Raiwand.rawValue
+            }
+        case .Bahria:
+            if self.selectedScreenType == .Entry {
+                self.tollModel.entryDistance = InterchangeDistanceTypes.Bahria.rawValue
+            } else {
+                self.tollModel.exitDistance = InterchangeDistanceTypes.Bahria.rawValue
+            }
         }
     }
     func validateFields(interchange: String,numberPlate: String,date: String) -> (Bool,String) {
