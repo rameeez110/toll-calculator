@@ -14,7 +14,7 @@ class TollService {
     {
         var parameters = [String: AnyObject]()
     }
-    func addOrEditMyTrip(toll: TollRequestModel,completionHandler:@escaping (AnyObject?,CustomError?) -> Void)
+    func addOrEditMyTrip(toll: TollModel,completionHandler:@escaping (AnyObject?,CustomError?) -> Void)
     {
         var path = Constants.Endpoint.getTrips
         var type = ApiType.Post
@@ -33,7 +33,7 @@ class TollService {
                     error.errorString = swiftyJson["failure"].string ?? "Api Error"
                     completionHandler(nil,error)
                 } else {
-                    if let value = swiftyJson["success"].string{
+                    if let value = swiftyJson["_id"].string{
                         completionHandler(value as AnyObject,nil)
                     }
                 }

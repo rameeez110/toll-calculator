@@ -33,6 +33,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func setupUI() {
+        self.numberPlateTextField.text = self.viewModel?.tollModel.numberPlate
         if self.viewModel?.selectedScreenType == .Entry {
             self.title = "Entry"
             self.submitButton.setTitle("Submit", for: .normal)
@@ -66,6 +67,48 @@ extension ViewController {
 extension ViewController {
     @IBAction func didTapSubmit() {
         self.viewModel?.didTapSubmit(interchange: self.interchangeTextField.text!, numberPlate: self.numberPlateTextField.text!, date: self.dateTextField.text!)
+    }
+    @IBAction func didTapInterchange() {
+        let sheet = UIAlertController.init(title: "", message: "Please select interchange", preferredStyle: UIAlertController.Style.actionSheet)
+        sheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { _ in
+            //Cancel Action
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.ZeroPoint.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.ZeroPoint.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.NS.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.NS.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.Ph4.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.Ph4.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.Ferozpur.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.Ferozpur.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.LakeCity.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.LakeCity.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.Raiwand.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.Raiwand.rawValue
+        }))
+        sheet.addAction(UIAlertAction(title: InterchangeTypes.Bahria.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            self.interchangeTextField.text = InterchangeTypes.Bahria.rawValue
+        }))
+        CommonClass.sharedInstance.showSheet(sheet: sheet, sender: UIButton(), owner: self)
     }
     @IBAction func didTapDate() {
         let vc = DatePickerPopupViewController(nibName: "DatePickerPopupViewController", bundle: nil)

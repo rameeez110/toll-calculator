@@ -18,40 +18,41 @@ protocol EntryViewModelProtocol {
 
     var delegate: EntryViewModelDelegate? { get set }
     var selectedScreenType: TollScreenType { get set }
+    var tollModel: TollModel { get set }
     
     func didTapSubmit(interchange: String,numberPlate: String,date: String)
 }
 
 final class EntryViewModel: EntryViewModelProtocol {
-
     weak var delegate: EntryViewModelDelegate?
     private let navigator: EntryNavigatorProtocol
     var selectedScreenType: TollScreenType
+    var tollModel: TollModel
     private let tollService: TripsServiceProtocol
 
-    init(service: TripsServiceProtocol,type: TollScreenType,navigator: EntryNavigatorProtocol, delegate: EntryViewModelDelegate? = nil) {
+    init(model: TollModel,service: TripsServiceProtocol,type: TollScreenType,navigator: EntryNavigatorProtocol, delegate: EntryViewModelDelegate? = nil) {
         self.delegate = delegate
         self.navigator = navigator
         self.selectedScreenType = type
         self.tollService = service
+        self.tollModel = model
     }
 
     func didTapSubmit(interchange: String,numberPlate: String,date: String) {
         let (status,string) = self.validateFields(interchange: interchange,numberPlate: numberPlate,date: date)
         if status {
             self.delegate?.hideInfoLabel()
-            var toll = TollRequestModel.init()
-            toll.numberPlate = numberPlate
+            self.tollModel.numberPlate = numberPlate
             if self.selectedScreenType == .Entry {
-                toll.entryInterchange = interchange
-                toll.entryDate = date
-                self.tollService.addUpdateToll(toll: toll)
+                self.tollModel.entryInterchange = interchange
+                self.tollModel.entryDate = date
+                self.tollService.addUpdateToll(toll: self.tollModel)
                 
             } else {
-                toll.exitDate = date
-                toll.exitInterchange = interchange
-                toll.tripStatus = .Completed
-                self.tollService.addUpdateToll(toll: toll)
+                self.tollModel.exitDate = date
+                self.tollModel.exitInterchange = interchange
+                self.tollModel.tripStatus = .Completed
+                self.tollService.addUpdateToll(toll: self.tollModel)
             }
         } else {
             self.delegate?.validationError(error: string)
@@ -68,6 +69,10 @@ final class EntryViewModel: EntryViewModelProtocol {
             string = "Please enter number plate"
             return (false,string)
         }
+        if !CommonClass.sharedInstance.isValidNumberPlate(numberPlate) {
+            string = "Please enter valid number plate like LLL-NNN"
+            return (false,string)
+        }
         
         if date.isEmpty {
             string = "Please select date"
@@ -78,8 +83,9 @@ final class EntryViewModel: EntryViewModelProtocol {
 }
 
 extension EntryViewModel: TripsServiceDelegate {
-    func didAddUpdateTrip(toll: TollRequestModel) {
-        self.navigator.navigateToSubmit()
+    func didAddUpdateTrip(toll: TollModel) {
+        self.tollModel = toll
+        self.navigator.navigateToSubmit(model: toll)
     }
     
     func didFailWithError(error: CustomError) {

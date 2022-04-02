@@ -19,9 +19,11 @@ struct AppNavigator {
         let repository = TripRepository.init(remoteTripDataSource: remoteDataSource)
         let service = TripsService.init(tripRepository: repository)
         let navigator = EntryNavigator(navigationController: rootController)
-        let viewModel = EntryViewModel(service: service, type: .Entry, navigator: navigator)
+        let viewModel = EntryViewModel(model: TollModel(), service: service, type: .Entry, navigator: navigator)
         
-//        service.delegate = viewModel
+        remoteDataSource.delegate = repository
+        repository.delegate = service
+        service.delegate = viewModel
         viewModel.delegate = vc
         vc.viewModel = viewModel
         

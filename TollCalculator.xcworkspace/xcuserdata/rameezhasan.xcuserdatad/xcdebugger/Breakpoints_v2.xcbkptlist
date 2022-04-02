@@ -3,4 +3,70 @@
    uuid = "C2F22A9C-69FA-4FF9-AF27-2BE81106E6D8"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05358C4B-C2D2-4344-84B2-68891071B6F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TollCalculator/Features/Services/TollService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "addOrEditMyTrip(toll:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05358C4B-C2D2-4344-84B2-68891071B6F7 - 731fae1900bc9f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TollCalculator.Result) -&gt; () in TollCalculator.TollService.addOrEditMyTrip(toll: TollCalculator.TollRequestModel, completionHandler: (Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;TollCalculator.CustomError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TollCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rameezhasan/toll-calculator/TollCalculator/Features/Services/TollService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "981">
+               </Location>
+               <Location
+                  uuid = "05358C4B-C2D2-4344-84B2-68891071B6F7 - 731fae1900bc9f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TollCalculator.Result) -&gt; () in TollCalculator.TollService.addOrEditMyTrip(toll: TollCalculator.TollRequestModel, completionHandler: (Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;TollCalculator.CustomError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TollCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rameezhasan/toll-calculator/TollCalculator/Features/Services/TollService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1119">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00F7DDAC-555B-436F-B933-A52BA70C8632"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TollCalculator/Common/Networking/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "sentRequestToServer(request:apiName:params:apiType:_:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -41,6 +41,7 @@
 		B6E0968627F6B49E0051CBC6 /* TollCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0968527F6B49E0051CBC6 /* TollCalculatorTests.swift */; };
 		B6E0969027F6B49E0051CBC6 /* TollCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0968F27F6B49E0051CBC6 /* TollCalculatorUITests.swift */; };
 		B6E0969227F6B49E0051CBC6 /* TollCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0969127F6B49E0051CBC6 /* TollCalculatorUITestsLaunchTests.swift */; };
+		B6E5D48827F80BF000B8E292 /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E5D48727F80BF000B8E292 /* CommonClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		B6E0968B27F6B49E0051CBC6 /* TollCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E0968F27F6B49E0051CBC6 /* TollCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollCalculatorUITests.swift; sourceTree = "<group>"; };
 		B6E0969127F6B49E0051CBC6 /* TollCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6E5D48727F80BF000B8E292 /* CommonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonClass.swift; sourceTree = "<group>"; };
 		D5F4049051CC12C097CFDC5E /* Pods-TollCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator.debug.xcconfig"; path = "Target Support Files/Pods-TollCalculator/Pods-TollCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		D9A400BE498890EB580B05E6 /* Pods-TollCalculator-TollCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator-TollCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-TollCalculator-TollCalculatorUITests/Pods-TollCalculator-TollCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3362F6EC13B41AC12582A1F /* Pods-TollCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TollCalculator.release.xcconfig"; path = "Target Support Files/Pods-TollCalculator/Pods-TollCalculator.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D0F71C27F6E73300419400 /* CustomError.swift */,
+				B6E5D48727F80BF000B8E292 /* CommonClass.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				B6D0F73227F6E8B500419400 /* EntryNavigator.swift in Sources */,
 				B6D0F75627F71FE200419400 /* TripRemoteDataStore.swift in Sources */,
 				B6D0F72F27F6E82D00419400 /* AppNavigator.swift in Sources */,
+				B6E5D48827F80BF000B8E292 /* CommonClass.swift in Sources */,
 				B6D0F72527F6E77300419400 /* StoryboardExtension.swift in Sources */,
 				B6D0F71D27F6E73300419400 /* CustomError.swift in Sources */,
 				B6D0F74227F6FD6100419400 /* Enum.swift in Sources */,

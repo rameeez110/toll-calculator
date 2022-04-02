@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct TollRequestModel {
+struct TollModel {
     var entryDate = String()
     var exitDate = String()
     var numberPlate = String()

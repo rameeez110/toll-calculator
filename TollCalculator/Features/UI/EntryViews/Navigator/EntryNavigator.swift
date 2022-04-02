@@ -8,7 +8,7 @@
 import UIKit
 
 protocol EntryNavigatorProtocol {
-    func navigateToSubmit()
+    func navigateToSubmit(model: TollModel)
     func navigateToCalculate()
 }
 
@@ -22,7 +22,7 @@ class EntryNavigator: EntryNavigatorProtocol {
         self.navigationController = navigationController
     }
 
-    func navigateToSubmit() {
+    func navigateToSubmit(model: TollModel) {
         // controller create & setup
         let storyboard = UIStoryboard(storyboard: .main)
         let exitVC: ViewController = storyboard.instantiateViewController()
@@ -32,7 +32,10 @@ class EntryNavigator: EntryNavigatorProtocol {
             let remoteDataSource = TripRemoteDataStore()
             let repository = TripRepository.init(remoteTripDataSource: remoteDataSource)
             let service = TripsService.init(tripRepository: repository)
-            let viewModel = EntryViewModel(service: service, type: .Exit, navigator: navigator)
+            let viewModel = EntryViewModel(model: model, service: service, type: .Exit, navigator: navigator)
+            remoteDataSource.delegate = repository
+            repository.delegate = service
+            service.delegate = viewModel
             exitVC.viewModel = viewModel
             viewModel.delegate = exitVC
             navigationController?.pushViewController(exitVC, animated: true)
