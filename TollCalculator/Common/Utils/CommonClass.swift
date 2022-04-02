@@ -42,7 +42,7 @@ extension CommonClass {
 
 //MARK: Bussiness Rules
 extension CommonClass {
-    func mapBussinessRules(model: TollModel) -> String{
+    func mapBussinessRules(model: TollModel) -> (String,String){
         var cost = Double(20) // Base Rate
         let cal = Calendar.current
         
@@ -85,11 +85,48 @@ extension CommonClass {
         
         cost = cost + (perHourRate * Double(abs(model.exitDistance - model.entryDistance)))
         
+        if self.checkIfNationalHoliday(date: model.exitDate) {
+            discountInPercent = 50 // for national holicays
+        }
+        
         // applied discount if there is
         if discountInPercent > Int() {
             cost = cost - (cost * Double((discountInPercent/100)))
         }
         
-        return String(cost)
+        return (String(cost),String(discountInPercent))
+    }
+    
+    func checkIfNationalHoliday(date: Date) -> Bool{
+        let dayComponent = Calendar.current.component(.day, from: date)
+        let monthComponent = Calendar.current.component(.month, from: date)
+        var dayComponentString = "\(dayComponent)"
+        var monthComponentString = "\(monthComponent)"
+        if dayComponent < 10 {
+            dayComponentString = "0\(dayComponent)"
+        }
+        if monthComponent < 10 {
+            monthComponentString = "0\(monthComponent)"
+        }
+        
+        if let selectedDate = self.getDateFromString(dateString: "\(monthComponentString) \(dayComponentString)") {
+            if let date = self.getDateFromString(dateString: "03 23") { // 23rd march
+                return date == selectedDate
+            }
+            if let date = self.getDateFromString(dateString: "08 14") { // 14th august
+                return date == selectedDate
+            }
+            if let date = self.getDateFromString(dateString: "12 25") { // 25th dec
+                return date == selectedDate
+            }
+        }
+        return false
+    }
+    
+    func getDateFromString(dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM dd"
+        let dateStr = dateFormatter.date(from: dateString)
+        return dateStr
     }
 }

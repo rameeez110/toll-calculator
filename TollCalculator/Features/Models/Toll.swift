@@ -18,6 +18,7 @@ struct TollModel {
     var id = String()
     var entryDistance = Int()
     var exitDistance = Int()
+    var discount = String()
     
     init() {
         
@@ -31,6 +32,7 @@ struct TollModel {
         "entryInterchange": self.entryInterchange,
         "exitInterchange": self.exitInterchange,
         "totalCost": self.totalCost,
+        "discount": self.discount,
         "tripStatus": self.tripStatus.rawValue,
       ]
     }

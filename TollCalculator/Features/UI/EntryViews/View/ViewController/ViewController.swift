@@ -128,8 +128,9 @@ extension ViewController {
 
 extension ViewController: EntryViewModelDelegate {
     func alert(with title: String, message: String) {
-        self.setupInfo(status: false)
-        self.infoLabel.text = message
+//        self.setupInfo(status: false)
+//        self.infoLabel.text = message
+        self.viewModel?.openCostingVc()
     }
     func validationError(error: String) {
         self.setupInfo(status: false)

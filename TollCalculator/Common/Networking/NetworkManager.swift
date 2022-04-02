@@ -74,39 +74,56 @@ class NetworkManager: NSObject {
             methodType = .post
             methodString = "POST"
         }
-        var jsonData = try? JSONSerialization.data(withJSONObject: param ?? [String: AnyObject]())
         
-        if param == nil {
-            jsonData = try? JSONSerialization.data(withJSONObject: arrayPrm)
-        }
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = methodString
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = jsonData
-        request.timeoutInterval = 50
-        
-        do {
-            // make sure this JSON is in the format we expect
-            if let json = try JSONSerialization.jsonObject(with: jsonData!, options: []) as? [String: Any] {
-                // try to read out a string array
-                print(json)
+        if bodyparam {
+            var jsonData = try? JSONSerialization.data(withJSONObject: param ?? [String: AnyObject]())
+            
+            if param == nil {
+                jsonData = try? JSONSerialization.data(withJSONObject: arrayPrm)
             }
-        } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
-        }
-        
-        AF.request(request).responseJSON {
-            (response) in
-            switch response.result
-            {
-            case .success(_):
-                print("Response of API: \(url!), \nPayload: \(response)")
-                completionHandler(Result.Success(response))
-            case .failure(let error):
-                print("Failure of API: \(url!), \nPayload: \(error)")
-                completionHandler(Result.Failure(CustomError.init(errorCode: error.responseCode ?? 0, errorString: error.localizedDescription)))
+            
+            var request = URLRequest(url: url!)
+            request.httpMethod = methodString
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = jsonData
+            request.timeoutInterval = 50
+            
+            do {
+                // make sure this JSON is in the format we expect
+                if let json = try JSONSerialization.jsonObject(with: jsonData!, options: []) as? [String: Any] {
+                    // try to read out a string array
+                    print(json)
+                }
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
             }
+            
+            AF.request(request).responseJSON {
+                (response) in
+                switch response.result
+                {
+                case .success(_):
+                    print("Response of API: \(url!), \nPayload: \(response)")
+                    completionHandler(Result.Success(response))
+                case .failure(let error):
+                    print("Failure of API: \(url!), \nPayload: \(error)")
+                    completionHandler(Result.Failure(CustomError.init(errorCode: error.responseCode ?? 0, errorString: error.localizedDescription)))
+                }
+            }
+        } else {
+            AF.request(url!, method: methodType, parameters: param, headers: headers).validate(statusCode: 200..<300)
+                .validate(contentType: ["application/json"])
+                .responseJSON {(response) in
+                    switch response.result
+                    {
+                    case .success(_):
+                        print("Response of API: \(url!), \nPayload: \(response)")
+                        completionHandler(Result.Success(response))
+                    case .failure(let error):
+                        print("Failure of API: \(url!), \nPayload: \(error)")
+                        completionHandler(Result.Failure(CustomError.init(errorCode: error.responseCode ?? 0, errorString: error.localizedDescription)))
+                    }
+                }
         }
     }
 }

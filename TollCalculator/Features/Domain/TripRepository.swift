@@ -10,11 +10,13 @@ import Foundation
 protocol TripRepositoryDelegate: class {
     func didAddUpdateTrip(toll: TollModel)
     func didFailWithError(error: CustomError)
+    func didFetchTrips(trips: [Trips])
 }
 
 protocol TripRepositoryProtocol {
     var delegate: TripRepositoryDelegate? { get set }
     func addUpdateToll(parameters: TollModel)
+    func getTrips()
 }
 
 final class TripRepository: TripRepositoryProtocol {
@@ -27,14 +29,19 @@ final class TripRepository: TripRepositoryProtocol {
     }
 
     func addUpdateToll(parameters: TollModel) {
-        remoteTripDataSource.addUpdateTrip(parameters: parameters)
+        self.remoteTripDataSource.addUpdateTrip(parameters: parameters)
     }
-
+    func getTrips() {
+        self.remoteTripDataSource.getTrips()
+    }
 }
 
 extension TripRepository: TripRemoteDataStoreDelegate {
 
     // MARK:- Trip RemoteDataStoreDelegate
+    func didFetchTrips(trips: [Trips]) {
+        self.delegate?.didFetchTrips(trips: trips)
+    }
     func didAddUpdateTrip(toll: TollModel){
         self.delegate?.didAddUpdateTrip(toll: toll)
     }

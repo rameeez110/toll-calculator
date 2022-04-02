@@ -21,6 +21,8 @@ class FinalCostViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.viewModel?.getTrips()
     }
 
 }
@@ -28,6 +30,13 @@ class FinalCostViewController: UIViewController {
 //MARK: - Delegates
 
 extension FinalCostViewController: FinalCostViewModelDelegate {
+    func updateUI(trip: Trips,model: TollModel) {
+        self.totalAmountLabel.text = "\(trip.totalCost) Rs"
+        self.rateLabel.text = "20 Rs"
+        self.discountLabel.text = "\(model.discount) %"
+        self.distanceLabel.text = "\(abs(model.exitDistance - model.entryDistance)) covered"
+    }
+    
     func alert(with title: String, message: String) {
 
     }

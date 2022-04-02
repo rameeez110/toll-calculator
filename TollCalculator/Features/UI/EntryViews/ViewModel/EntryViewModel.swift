@@ -22,6 +22,7 @@ protocol EntryViewModelProtocol {
     
     func didTapSubmit(interchange: String,numberPlate: String,date: String)
     func updateEntryOrExitInterchange(type: InterchangeTypes)
+    func openCostingVc()
 }
 
 final class EntryViewModel: EntryViewModelProtocol {
@@ -53,11 +54,18 @@ final class EntryViewModel: EntryViewModelProtocol {
                 self.tollModel.exitDate = self.tollModel.exitDate
                 self.tollModel.exitInterchange = interchange
                 self.tollModel.tripStatus = .Completed
-                self.tollModel.totalCost = CommonClass.sharedInstance.mapBussinessRules(model: self.tollModel)
+                let (cost,discount) = CommonClass.sharedInstance.mapBussinessRules(model: self.tollModel)
+                self.tollModel.totalCost = cost
+                self.tollModel.discount = discount
                 self.tollService.addUpdateToll(toll: self.tollModel)
             }
         } else {
             self.delegate?.validationError(error: string)
+        }
+    }
+    func openCostingVc() {
+        if self.selectedScreenType == .Exit {
+            self.navigator.navigateToCalculate(model: self.tollModel)
         }
     }
     func updateEntryOrExitInterchange(type: InterchangeTypes) {
@@ -136,9 +144,16 @@ final class EntryViewModel: EntryViewModelProtocol {
 }
 
 extension EntryViewModel: TripsServiceDelegate {
+    func didFetchTrips(trips: [Trips]) {
+    }
+    
     func didAddUpdateTrip(toll: TollModel) {
         self.tollModel = toll
-        self.navigator.navigateToSubmit(model: toll)
+        if self.selectedScreenType == .Entry {
+            self.navigator.navigateToSubmit(model: toll)
+        } else {
+            self.navigator.navigateToCalculate(model: toll)
+        }
     }
     
     func didFailWithError(error: CustomError) {

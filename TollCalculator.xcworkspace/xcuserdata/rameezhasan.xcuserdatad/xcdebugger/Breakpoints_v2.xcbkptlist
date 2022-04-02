@@ -14,8 +14,8 @@
             filePath = "TollCalculator/Features/Services/TollService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "addOrEditMyTrip(toll:completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -55,16 +55,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "00F7DDAC-555B-436F-B933-A52BA70C8632"
-            shouldBeEnabled = "Yes"
+            uuid = "90B4A681-34C9-4010-9766-A9B835D5608E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TollCalculator/Common/Networking/NetworkManager.swift"
+            filePath = "TollCalculator/Common/Utils/CommonClass.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "sentRequestToServer(request:apiName:params:apiType:_:completionHandler:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "mapBussinessRules(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93BEFC6C-309E-4F2F-A311-ECD2D830ABF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TollCalculator/Features/UI/EntryViews/ViewModel/EntryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "didFailWithError(error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
